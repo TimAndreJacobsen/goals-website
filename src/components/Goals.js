@@ -2,13 +2,13 @@
 [ ] - Static Mockup
     [ ] - create a background
     [x] - create a navbar
+    [x] - create a goal row
     [x] - render the page
-    [ ] - create a table like structure for goals. rows = [goal text - wide][checkbox - small]
 
 */
 
 import {Nav, Navbar} from 'react-bootstrap';
-import GoalRows from './GoalRow';
+import GoalRows from './GoalRows';
 import React from 'react';
 
 
