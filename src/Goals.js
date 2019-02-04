@@ -1,5 +1,5 @@
 import {Nav, Navbar, Container, ListGroup} from 'react-bootstrap';
-import IndividualGoal from './IndividualGoal';
+import IndividualGoal from './components/IndividualGoal';
 import React from 'react';
 
 
@@ -7,7 +7,8 @@ class Goals extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            newGoal: ''
+            newGoal: '',
+            goals: []
         };
     }
 
@@ -20,6 +21,12 @@ class Goals extends React.Component{
     submitGoal(e) {
         e.preventDefault();
         console.log(this.state.newGoal);
+        this.setState({
+            goals: [...this.state.goals, {
+                title: this.state.newGoal,
+                isComplete: false
+            }]
+        });
     }
 
     render() {
