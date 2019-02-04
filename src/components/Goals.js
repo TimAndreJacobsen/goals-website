@@ -1,5 +1,5 @@
-import {Nav, Navbar} from 'react-bootstrap';
-import GoalRows from './GoalRows';
+import {Nav, Navbar, Container, ListGroup} from 'react-bootstrap';
+import IndividualGoal from './IndividualGoal';
 import CreateGoal from './CreateGoal';
 import React from 'react';
 
@@ -18,7 +18,17 @@ class Goals extends React.Component{
                 </Nav>
             </Navbar>
 
-            <GoalRows />
+            <Container>
+
+                <h1>Your Active Goals</h1>
+
+                <ListGroup>
+                    <ListGroup.Item>
+                        <IndividualGoal />
+                    </ListGroup.Item>
+                </ListGroup>
+
+            </Container>
 
             <CreateGoal />
 
