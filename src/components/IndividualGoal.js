@@ -7,12 +7,12 @@ class IndividualGoal extends React.Component {
         var goalOne = {'title': 'goal1',
                     'type': 'todo',
                     'isCompleted': true                    
-                }
+        };
 
         var goalTwo = { 'title': 'goal2',
                         'type': 'todo',
                         'isCompleted': true                    
-            }
+        };
 
         var goalThree = {
             'title': 'Goal two Title',
@@ -39,7 +39,6 @@ class IndividualGoal extends React.Component {
                         <button className="btn-primary btn-block">{item.isCompleted ? 'Yes!' : 'No'}</button>
                     </div>
                 </div>
-                
 
         );
       });

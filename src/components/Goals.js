@@ -1,12 +1,3 @@
-/*
-[ ] - Static Mockup
-    [ ] - create a background
-    [x] - create a navbar
-    [x] - create a goal row
-    [x] - render the page
-
-*/
-
 import {Nav, Navbar} from 'react-bootstrap';
 import GoalRows from './GoalRows';
 import CreateGoal from './CreateGoal';
