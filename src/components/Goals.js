@@ -9,6 +9,7 @@
 
 import {Nav, Navbar} from 'react-bootstrap';
 import GoalRows from './GoalRows';
+import CreateGoal from './CreateGoal';
 import React from 'react';
 
 
@@ -27,6 +28,8 @@ class Goals extends React.Component{
             </Navbar>
 
             <GoalRows />
+
+            <CreateGoal />
 
         </div>
 
