@@ -30,7 +30,12 @@ class Goals extends React.Component{
     }
 
     render() {
+        const stylesObj = {
+            background: "#CDCDCD"
+        };
+
       return (
+    <div id="hello-world" style={stylesObj} className="full-page">
         <div>
             <Navbar className="bg-secondary text-white">
                 <Navbar.Brand className="text-white" href="#home">Goals</Navbar.Brand>
