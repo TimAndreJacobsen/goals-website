@@ -1,4 +1,4 @@
-import {Nav, Navbar, Container, ListGroup} from 'react-bootstrap';
+import {Nav, Navbar, Container, ListGroup, Dropdown, ButtonToolbar, DropdownButton} from 'react-bootstrap';
 import IndividualGoal from './components/IndividualGoal';
 import React from 'react';
 
@@ -20,7 +20,7 @@ class Goals extends React.Component{
 
     submitGoal(e) {
         e.preventDefault();
-        console.log(this.state.newGoal);
+        console.log(this.state.newGoal); 
         this.setState({
             goals: [...this.state.goals, {
                 title: this.state.newGoal,
@@ -32,12 +32,20 @@ class Goals extends React.Component{
     render() {
       return (
         <div>
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Goals</Navbar.Brand>
+            <Navbar className="bg-secondary text-white">
+                <Navbar.Brand className="text-white" href="#home">Goals</Navbar.Brand>
                 <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#Progress">Progress</Nav.Link>
-                <Nav.Link href="#settings">Settings</Nav.Link>
+                <Nav.Link className="text-white" href="#home">Home</Nav.Link>
+                <Nav.Link className="text-white" href="#Progress">Progress</Nav.Link>
+
+                <ButtonToolbar className="">
+                    <DropdownButton className="" title="Settings" variant="secondary" id="dropdown-basic-secondary">
+                        <Dropdown.Item href="#/action-1" className="">dark mode</Dropdown.Item>
+                    </DropdownButton>
+                </ButtonToolbar>
+            
+    
+
                 </Nav>
             </Navbar>
 
