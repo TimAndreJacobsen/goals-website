@@ -28,6 +28,9 @@ class IndividualGoal extends React.Component {
 
         const goalList = [goalOne, goalTwo, goalThree, goalFour];
 
+        // TODO: use bootstraps "forms" or "input group" for row [description:input]
+        // TODO: move create goal button to bottom and centered
+        // TODO: make responsive
         return goalList.map(item => {
             return (
 
