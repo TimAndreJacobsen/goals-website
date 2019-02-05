@@ -1,4 +1,4 @@
-import {Nav, Navbar, Container, ListGroup, Dropdown, ButtonToolbar, DropdownButton} from 'react-bootstrap';
+import {Nav, Navbar, Container, ListGroup, Dropdown, ButtonToolbar, DropdownButton, Card} from 'react-bootstrap';
 import IndividualGoal from './components/IndividualGoal';
 import React from 'react';
 
@@ -52,14 +52,16 @@ class Goals extends React.Component{
             <Container>
                 <h1>Your Active Goals</h1>
 
-                <ListGroup>
-                    <ListGroup.Item>
+                <Card style={{ width: '30rem' }}>
+                    <ListGroup variant="flush">
                         <IndividualGoal />
-                    </ListGroup.Item>
-                </ListGroup>
-            </Container>
+                    </ListGroup>
+                </Card>
 
-            <div className="center-padded">
+            </Container>
+            
+
+            <div>
                 <form onSubmit={(e) => this.submitGoal(e)}>
                     <label htmlFor="NewGoal">Goal Title:</label>
                     <input onChange={(e) => this.newTodoChanged(e)} id="newGoal" name="newGoal" />
@@ -70,7 +72,7 @@ class Goals extends React.Component{
             </div>
 
         </div>
-
+    </div>
       );
     }
 
