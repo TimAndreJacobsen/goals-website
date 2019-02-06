@@ -1,7 +1,8 @@
-import {Nav, Navbar, Container, ListGroup, Dropdown, ButtonToolbar, DropdownButton, Card} from 'react-bootstrap';
+import {Nav, Navbar, Container, ListGroup, Dropdown, DropdownButton, Card} from 'react-bootstrap';
 import IndividualGoal from './components/IndividualGoal';
 import React from 'react';
-
+ 
+// goals as cards to make styling easier
 
 class Goals extends React.Component{
     constructor(props){
@@ -36,37 +37,29 @@ class Goals extends React.Component{
 
       return (
     <div id="hello-world" style={stylesObj} className="full-page">
-        <div>
-            <Navbar className="bg-secondary text-white">
+
+            <Navbar className="Navbar bg-secondary text-white">
                 <Navbar.Brand className="text-white" href="#home">Goals</Navbar.Brand>
-                <Nav className="mr-auto">
+                <Nav className="Nav mr-auto">
                 <Nav.Link className="text-white" href="#home">Home</Nav.Link>
                 <Nav.Link className="text-white" href="#Progress">Progress</Nav.Link>
 
-                <ButtonToolbar className="">
-                    <DropdownButton className="" title="Settings" variant="secondary" id="dropdown-basic-secondary">
-                        <Dropdown.Item href="#/action-1" className="">dark mode</Dropdown.Item>
-                    </DropdownButton>
-                </ButtonToolbar>
-            
-    
+
+                <DropdownButton className="bg-secondary" title="Settings" variant="secondary" id="dropdown-basic-secondary">
+                    <Dropdown.Item href="#/action-1" className="">dark theme</Dropdown.Item>
+                </DropdownButton>
 
                 </Nav>
             </Navbar>
 
-            <Container>
+            <Container className="">
                 <h1>Your Active Goals</h1>
-
                 <Card style={{ width: '30rem' }}>
                     <ListGroup variant="flush">
                         <IndividualGoal />
                     </ListGroup>
                 </Card>
 
-            </Container>
-            
-
-            <div>
                 <form onSubmit={(e) => this.submitGoal(e)}>
                     <label htmlFor="NewGoal">Goal Title:</label>
                     <input onChange={(e) => this.newTodoChanged(e)} id="newGoal" name="newGoal" />
@@ -74,9 +67,11 @@ class Goals extends React.Component{
                         Create New Goal
                     </button>
                 </form>
-            </div>
 
-        </div>
+            </Container>
+            
+
+
     </div>
       );
     }
